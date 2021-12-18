@@ -1,0 +1,14 @@
+
+git init
+git remote add origin git@github.com:RobiDeantonio/ceres-robotics-project.git
+
+git checkout -b <New Branch> 
+git add <folder o files> :   use '.' for all files
+git commit -am "ROS interface ceres GUI"
+git push -u origin <New Remote Branch> 
+
+git log
+git status
+git push origin --delete <Branch remote to remove>
+git branch -d <remove Branch>
+git show-branch 
