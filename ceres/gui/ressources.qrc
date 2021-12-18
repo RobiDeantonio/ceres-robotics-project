@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>noun_configuration_1613324.png</file>
+        <file>noun_connection_1583671.png</file>
+        <file>noun_dashboard_357677.png</file>
+        <file>noun_Graph_1495300.png</file>
+        <file>noun_Map_972135.png</file>
+        <file>noun_sequence_121702.png</file>
+        <file>roll.png</file>
+        <file>pitch.png</file>
+        <file>heading.png</file>
+    </qresource>
+</RCC>
