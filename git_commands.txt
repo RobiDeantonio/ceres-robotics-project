@@ -12,3 +12,5 @@ git status
 git push origin --delete <Branch remote to remove>
 git branch -d <remove Branch>
 git show-branch 
+
+git revert HEAD
