@@ -1,21 +1,23 @@
-from qOSM.config import config
-
-doTrace = False
-
-import sys
 import json
 import os
 import decorator
+# import sys
 
-#backend = config['backend']
-backend="PyQt5"
+# from qOSM.config import config
+
+doTrace = False
+
+
+# backend = config['backend']
+backend = "PyQt5"
 if backend == "PyQt5":
-        from PyQt5.QtCore import pyqtSignal, QUrl
-        from PyQt5.QtGui import QDesktopServices
-        from PyQt5.QtNetwork import QNetworkDiskCache, QNetworkAccessManager
-        from PyQt5.QtWebEngineWidgets import QWebEngineSettings as QWebSettings
-        from PyQt5.QtWebEngineWidgets import QWebEngineView as QWebView,QWebEnginePage as QWebPage
-        from PyQt5.QtWidgets import QApplication
+    from PyQt5.QtCore import pyqtSignal, QUrl
+    from PyQt5.QtGui import QDesktopServices
+    from PyQt5.QtNetwork import QNetworkDiskCache, QNetworkAccessManager
+    from PyQt5.QtWebEngineWidgets import QWebEngineSettings
+    from PyQt5.QtWebChannel import QWebChannel
+    from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
+    from PyQt5.QtWidgets import QApplication
 
 elif backend == "PyQt4":
     from PyQt4.QtCore import pyqtSignal, QUrl
@@ -28,19 +30,21 @@ def trace(function, *args, **k):
     """Decorates a function by tracing the begining and
     end of the function execution, if doTrace global is True"""
 
-    if doTrace: print("> " + function.__name__, args, k)
+    if doTrace:
+        print("> " + function.__name__, args, k)
     result = function(*args, **k)
-    if doTrace: print("< " + function.__name__, args, k, "->", result)
+    if doTrace:
+        print("< " + function.__name__, args, k, "->", result)
     return result
 
 
-class _LoggedPage(QWebPage):
+class _LoggedPage(QWebEnginePage):
     @trace
     def javaScriptConsoleMessage(self, msg, line, source):
         print('JS: %s line %d: %s' % (source, line, msg))
 
 
-class QOSM(QWebView):
+class QOSM(QWebEngineView):
     mapMoved = pyqtSignal(float, float)
     mapClicked = pyqtSignal(float, float)
     mapRightClicked = pyqtSignal(float, float)
@@ -52,30 +56,32 @@ class QOSM(QWebView):
     markerRightClicked = pyqtSignal(str, float, float)
 
     def __init__(self, parent=None, debug=True):
-        QWebView.__init__(self, parent=parent)
+        QWebEngineView.__init__(self, parent=parent)
 
-        #self.page_ = QWebPage()
-        #self.setPage(self.page_)
+        # self.page_ = QWebEnginePage()
+        # self.setPage(self.page_)
 
-        #cache = QNetworkDiskCache()
-        #cache.setCacheDirectory("cache")
-        #self.page().QNetworkAccessManager().setCache(cache)
-        #self.page().QNetworkAccessManager()
+        cache = QNetworkDiskCache()
+        cache.setCacheDirectory("cache")
+        # self.page().QNetworkAccessManager().setCache(cache)
+        # self.page().QNetworkAccessManager()
 
-        #if debug:
-        #    QWebSettings.globalSettings().setAttribute(
-        #        QWebSettings.DeveloperExtrasEnabled, True
+        # if debug:
+        #    QWebEngineSettings.globalSettings().setAttribute(
+        #        QWebEngineSettings.DeveloperExtrasEnabled, True
         #    )
 
         self.initialized = False
 
-        #self.page().mainFrame().addToJavaScriptWindowObject("qtWidget", self)
+        channel = QWebChannel(self)
+        self.page().setWebChannel(channel)
+        channel.registerObject("qtWidget", self)
 
         basePath = os.path.abspath(os.path.dirname(__file__))
         url = 'file://' + basePath + '/qOSM.html'
         self.load(QUrl(url))
 
-        #self.page().setLinkDelegationPolicy(QWebPage.DelegateAllLinks)
+        # self.page().setLinkDelegationPolicy(QWebEnginePage.DelegateAllLinks)
 
         self.loadFinished.connect(self.onLoadFinished)
         QDesktopServices.openUrl
@@ -89,11 +95,11 @@ class QOSM(QWebView):
             print("Error initializing OpenStreetMap")
 
         self.initialized = True
-        self.centerAt(0, 0)
-        self.setZoom(10)
+        self.centerAt(4.638, -74.08523)
+        self.setZoom(16)
 
     def callback(self, html):
-        print(str(html).encode('utf-8'))
+        pass # print(str(html).encode('utf-8'))
 
     def waitUntilReady(self):
         while not self.initialized:

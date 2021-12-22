@@ -4,7 +4,8 @@ import sys
 import os
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import QObject, QTimer, Qt
-from PyQt5.QtGui import QPixmap, QImage, QTransform, QPixmap
+from PyQt5.QtGui import QPixmap, QImage, QTransform, QPixmap, QTextCursor
+from PyQt5.QtWidgets import QFileDialog
 from mainwindow import Ui_MainWindow
 import subprocess32 as subprocess
 import time
@@ -557,7 +558,7 @@ def refreshTrajectory():
 		myapp.ui.graphicsView_13.plot(points[0], points[1], pen=pyqtgraph.mkPen('r', width=3))
 
 	path = os.path.dirname(os.path.abspath(__file__))
-	img = pyqtgraph.QtWidgets.QGraphicsPixmapItem(pyqtgraph.QtWidgets.QPixmap(os.path.join(path, 'top.png')))
+	img = QtWidgets.QGraphicsPixmapItem(QtGui.QPixmap(os.path.join(path, 'top.png')))
 	img.scale(0.04,-0.04)
 	img.translate(-2.02/0.04,-0.82/0.04)
 	myapp.ui.graphicsView_13.addItem(img)
@@ -706,12 +707,12 @@ if __name__ == "__main__":
 	procsTimer.start(int(1000/procsRate))
 	
 	myapp.ui.graphicsView.waitUntilReady()
-	myapp.ui.graphicsView.centerAt(48.858370, 2.294481)
-	myapp.ui.graphicsView.setZoom(20)
+	myapp.ui.graphicsView.centerAt(4.638, -74.08523)
+	myapp.ui.graphicsView.setZoom(15)
 	
 	myapp.ui.graphicsView_3.waitUntilReady()
-	myapp.ui.graphicsView_3.centerAt(48.858370, 2.294481)
-	myapp.ui.graphicsView_3.setZoom(20)
+	myapp.ui.graphicsView_3.centerAt(4.638, -74.08523)
+	myapp.ui.graphicsView_3.setZoom(16)
 
 	myapp.ui.graphicsView_13.setLabel('left', "Robot Front Axis")
 	myapp.ui.graphicsView_13.setLabel('bottom', "Robot Right Axis")

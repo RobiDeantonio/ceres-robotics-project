@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
 
-
-    <style type="text/css">
+        <style type="text/css">
 			html { height: 100%; }
 			body { height: 100%; margin: 0; padding: 0 }
 			#mapid { height: 100% }
-    </style>
+        </style>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
-          integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-          crossorigin=""/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" 
+        crossorigin="" />
 
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
-            integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
-            crossorigin=""></script>
+ 
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" 
+        crossorigin=""></script>
 
-    <script type="text/javascript" src="qOSM.js"></script>
-</head>
-<body onload="initialize()">
-<div id="mapid" style="width:100%; height:100%"></div>
-</body>
+
+        <script type="text/javascript" src="qOSM.js"></script>
+    </head>
+    <body onload="initialize()">
+        <div id="mapid" style="width:100%; height:100%"></div>
+    </body>
 </html>

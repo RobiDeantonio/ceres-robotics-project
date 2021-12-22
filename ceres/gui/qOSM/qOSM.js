@@ -9,11 +9,25 @@ var LeafIcon;
 function initialize() {
     var element = document.getElementById('mapid');
 
-    map = L.map(element);
+    //map = L.map(element);
+    map = L.map(element).setView([4.638, -74.08523], 16);
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+
+    /*L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+    */
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1Ijoicm9iaW5kZWFudG9uaW8iLCJhIjoiY2t4aHdtZmdyMmVhdzJ2c3RpZHpucHMzMCJ9.4557o_q6hWU6yu2vXS-o_g'
+    }).addTo(map);
+
+
 
     if (typeof qtWidget !== 'undefined') {
 
