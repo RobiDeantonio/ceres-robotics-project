@@ -1,6 +1,9 @@
-#folders
-beginner_tutorials/*
+# Ignore everything
+*
 
+## But not these folders...
+!ceres/*
 
-#files
-CMake*
+# But not these files...
+!README-CERES.md
+!.gitignore
