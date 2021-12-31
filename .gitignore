@@ -1,6 +1,10 @@
+# Ignore everything
+*
+
+
 #folders
-beginner_tutorials/*
+!LICENSE
+!README.md
+!git_commands.txt
 
-
-#files
-CMake*
+!.gitignore
