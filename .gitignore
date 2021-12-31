@@ -5,5 +5,5 @@
 !ceres/*
 
 # But not these files...
-!README-CERES.md
+!README.md
 !.gitignore
