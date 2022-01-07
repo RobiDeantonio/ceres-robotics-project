@@ -720,7 +720,7 @@ if __name__ == "__main__":
 	path = os.path.dirname(os.path.abspath(__file__))
 	img = QPixmap('top.png')
 	#img.scaled(Qt.IgnoreAspectRatio)
-	pixItem = QtGui.QGraphicsPixmapItem(img)
+	pixItem = QtWidgets.QGraphicsPixmapItem(img)
 	# img = pyqtgraph.QtWidgets.QGraphicsPixmapItem(pyqtgraph.QtWidgets.QPixmap(os.path.join(path, 'top.png')))
 	#img.scale(0.04,-0.04)
 	#img.translate(-2.02/0.04,-0.82/0.04)
