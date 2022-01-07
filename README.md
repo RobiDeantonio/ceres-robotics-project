@@ -77,6 +77,7 @@ $ rosrun ceres ceresGUI.py
 
 ## Contributing 🖇️
 
+Por favor lee el  para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 Please read [CONTRIBUTING.md](https://github.com/RobiDeantonio/ceres-robotics-project/tree/main/CONTRIBUTING.md) for details of our code of conduct, and the process for submitting pull requests.
 
 ## GIDAM 📖
