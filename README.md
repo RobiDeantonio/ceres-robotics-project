@@ -2,7 +2,7 @@
 
 Agricultural robotics research project
 
-## Comenzando 🚀
+## Starting 🚀
 
 _These instructions allow you to get a copy of the project running on your local machine for development and testing purposes._
 
@@ -14,7 +14,7 @@ The Agrobot CERES is a mobile robotic platform created by the National Universit
         
 ![](https://github.com/RobiDeantonio/ceres-robotics-project/blob/main/img/ceres.png)
 
-### Pre-requisitos 📋
+### Prerequisites 📋
 
 _What things do you need to install the software and how to install them._
 
@@ -47,7 +47,7 @@ $ git pull --all
 $ git checkout main       ## to work with main branch
 ```
 
-## Running testing with ROS Enviroment  _ceres Branch in git_ ⚙️
+## Running testing with ROS Enviroment  _(ceres Branch)_ ⚙️
 
 Locate your directory and run following commands:
 ```
@@ -66,7 +66,7 @@ $ source devel/setup.bash
 $ rosrun ceres ceresGUI.py
 ```
 
-## Construido con 🛠️
+## Built with 🛠️
 
 
 * [ROS](http://wiki.ros.org/noetic/Installation/Ubuntu) - The Robotics framework
@@ -85,7 +85,7 @@ Please read [CONTRIBUTING.md](https://github.com/RobiDeantonio/ceres-robotics-pr
 You can know more about the research group [GIDAM](https://www.umng.edu.co/sedes/bogota/facultad-de-ingenieria/centro-de-investigacion/gidam)
 
 
-## Autores ✒️
+## Authors ✒️
 
 
 * **Leonardo Enrique Solaque** - *Researcher* - [Leonardo](https://github)
@@ -100,10 +100,5 @@ You can know more about the research group [GIDAM](https://www.umng.edu.co/sedes
 
 This project is under the License - see the file [LICENSE.md](https://github.com/RobiDeantonio/ceres-robotics-project/blob/main/LICENSE) for details
 
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
 
 
