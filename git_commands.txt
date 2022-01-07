@@ -1,11 +1,27 @@
 
-git init
-git remote add origin git@github.com:RobiDeantonio/ceres-robotics-project.git
+###  Commands to download project and init on local 
 
+git init
+git remote add origin https://github.com/RobiDeantonio/ceres-robotics-project.git
+
+git branch     ## Show actual branches
+git fetch --all
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+git pull --all
+
+git checkout main       ## to work with main branch
+git checkout <Branch>   ## to work with <Branch> branch
+
+
+
+### Others commands to work with git and gitHub 
+
+## to send a push to github
 git checkout -b <New Branch> 
 git add <folder o files> :   use '.' for all files
 git commit -am "ROS interface ceres GUI"
-git push -u origin <New Remote Branch> 
+git push  origin <Remote Branch> 
+
 
 git log
 git status
