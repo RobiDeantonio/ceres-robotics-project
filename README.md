@@ -19,10 +19,11 @@ The Agrobot CERES is a mobile robotic platform created by the National Universit
 _What things do you need to install the software and how to install them._
 
 **Supported:** Ubuntu 20.04 & Debian Buster (10)
+
 **Experimental:** Windows 10, Arch Linux
-'ROS Noetic' : <http://wiki.ros.org/noetic/Installation>
-'Catkin_make ROS Enviroment' : <http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment>
-'Arduino' : <https://www.arduino.cc/en/software>
+`ROS Noetic` : <http://wiki.ros.org/noetic/Installation>
+`Catkin_make ROS Enviroment` : <http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment>
+`Arduino` : <https://www.arduino.cc/en/software>
 python => 3.6
 
 ### Instalation 🔧
