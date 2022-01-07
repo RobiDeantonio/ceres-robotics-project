@@ -12,7 +12,7 @@ See **Deployment** to know how to deploy the project.
 ## About the Project
 The Agrobot CERES is a mobile robotic platform created by the National University of Colombia and the Nueva Granada Military University with the aim of being able to measure, determine and autonomously carry out corrective actions on agricultural crops.
         
-![](https://github.com/RobiDeantonio/ceres-robotics-project/tree/main/img/ceres.png)
+![](https://github.com/RobiDeantonio/ceres-robotics-project/blob/main/img/ceres.png)
 
 ### Pre-requisitos 📋
 
@@ -78,7 +78,7 @@ $ rosrun ceres ceresGUI.py
 ## Contributing 🖇️
 
 Por favor lee el  para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-Please read [CONTRIBUTING.md](https://github.com/RobiDeantonio/ceres-robotics-project/tree/main/CONTRIBUTING.md) for details of our code of conduct, and the process for submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/RobiDeantonio/ceres-robotics-project/blob/main/CONTRIBUTING.md) for details of our code of conduct, and the process for submitting pull requests.
 
 ## GIDAM 📖
 
@@ -98,7 +98,7 @@ You can know more about the research group [GIDAM](https://www.umng.edu.co/sedes
 
 ## License 📄
 
-This project is under the License - see the file [LICENSE.md](LICENSE.md) for details
+This project is under the License - see the file [LICENSE.md](https://github.com/RobiDeantonio/ceres-robotics-project/blob/main/LICENSE) for details
 
 ## Expresiones de Gratitud 🎁
 
