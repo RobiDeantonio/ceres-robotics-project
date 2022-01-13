@@ -1,6 +1,6 @@
 [submodule "CERES-gui_and_advanced_Navigation"]
 	path = CERES-gui_and_advanced_Navigation
 	url = git@github.com:RobiDeantonio/CERES-gui_and_advanced_Navigation.git
-[submodule "Sciky-Learn"]
-	path = Sciky-Learn
-	url = git@github.com:RobiDeantonio/Sciky-Learn.git
+[submodule "CERES-CAD_Solidworks"]
+	path = CERES-CAD_Solidworks
+	url = git@github.com:RobiDeantonio/CERES-CAD_Solidworks.git

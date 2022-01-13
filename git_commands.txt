@@ -13,6 +13,19 @@ git checkout main       ## to work with main branch
 git checkout <Branch>   ## to work with <Branch> branch
 
 
+    ## submodules
+    # create Git repository
+    
+    git submodule add git@github.com:RobiDeantonio/CERES-CAD_Solidworks.git
+    git pull
+    
+    cd Sciky-Learn 
+    git commit -am 'Sciky Learn first commit'
+    cd ..
+    git commit -am 'New Submodule Sciky Learn'
+    git push 
+
+
 
 ### Others commands to work with git and gitHub 
 
