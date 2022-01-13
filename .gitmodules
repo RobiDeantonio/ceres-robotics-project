@@ -1,3 +1,6 @@
 [submodule "CERES-gui-advanced_Navigation"]
 	path = CERES-gui-advanced_Navigation
 	url = git@github.com:RobiDeantonio/CERES-gui-advanced_Navigation.git
+[submodule "CERES-gui_and_advanced_Navigation"]
+	path = CERES-gui_and_advanced_Navigation
+	url = git@github.com:RobiDeantonio/CERES-gui_and_advanced_Navigation.git
