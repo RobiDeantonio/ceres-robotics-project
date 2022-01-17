@@ -42,6 +42,8 @@ $ git remote add origin https://github.com/RobiDeantonio/ceres-robotics-project.
 $ git branch              ## Show actual branches
 $ git fetch --all
 $ git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+$ git checkout main
+$ git submodule init
 $ git pull --all
 
 $ git checkout main       ## to work with main branch
