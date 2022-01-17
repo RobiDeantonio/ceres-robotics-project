@@ -4,3 +4,7 @@
 [submodule "CERES-CAD_Solidworks"]
 	path = CERES-CAD_Solidworks
 	url = git@github.com:RobiDeantonio/CERES-CAD_Solidworks.git
+[submodule "CERES-ServoVisual_control"]
+	path = CERES-ServoVisual_control
+	url = git@github.com:RobiDeantonio/CERES-ServoVisual_control.git
+
