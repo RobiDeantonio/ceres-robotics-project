@@ -8,3 +8,6 @@
 	path = CERES-ServoVisual_control
 	url = git@github.com:RobiDeantonio/CERES-ServoVisual_control.git
 
+[submodule "Microcontrollers_Code"]
+	path = Microcontrollers_Code
+	url = git@github.com:RobiDeantonio/Microcontrollers_Code.git
